@@ -810,13 +810,13 @@
     :root {
       --ink: #111;
       --muted: #111;
-      --paper: #dff3e4;
+      --paper: #fff;
       --coral: #ffc7c2;
       --teal: #111;
       --line: #111;
     }
 
-    body, .resume-card { background: #dff3e4; color: #111; }
+    body, .resume-card { background: #fff; color: #111; }
     .topbar, .resume-grid { border-color: #111; }
     .topbar-brand, .action-button, .nav-link, .hero h2, .hero-button, .name-title h1,
     .section-title, .project-name, .exp-role, .edu-title, .contact-item, .text-small,
@@ -829,6 +829,8 @@
     .hero-art::after, .hero-button:not(.primary), .hero-monogram { background-color: #dff3e4; }
     .hero-monogram, .hero-button, .project-item, .exp-item, .chip, .achievement-item { border-color: #111; }
     .contact-item i, .section-title i, .skill-list i, .mini-item i, .project-name i, .exp-company { color: #111 !important; }
+    .project-desc { border-left-color: #ffc7c2; }
+    .project-desc li::before, .exp-desc li::before { color: #111; }
 
     body.dark { background: #111; --ink: #dff3e4; --muted: #ffc7c2; --paper: #111; --line: #dff3e4; }
     body.dark .resume-card, body.dark .project-item, body.dark .exp-item { background: #111; }
