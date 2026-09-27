@@ -882,6 +882,67 @@
     body.dark .skill-list, body.dark .skill-list span { color: #dff3e4 !important; }
     body.dark .hero-meta { color: #ffc7c2; }
     body.dark .hero-button.download { color: #dff3e4 !important; border-color: #dff3e4; }
+
+    /* Laptop and mobile layout refinements. */
+    @media (max-width: 1100px) {
+      body { padding-left: 1rem; padding-right: 1rem; }
+      .resume-card { padding-left: 1.75rem; padding-right: 1.75rem; }
+      .topbar { margin-left: -1.75rem; margin-right: -1.75rem; padding-left: 1.75rem; padding-right: 1.75rem; }
+      .hero { gap: 1.5rem; padding-top: 5.2rem; }
+      .hero h2 { font-size: clamp(2.8rem, 5.5vw, 4.4rem); }
+      .resume-grid { grid-template-columns: minmax(13rem, 0.85fr) minmax(0, 1.6fr); gap: 1.5rem; }
+    }
+
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; gap: 1rem; padding-top: 4.2rem; }
+      .hero-art { order: -1; min-height: 17rem; }
+      .resume-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+      .left-panel, .right-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; align-items: start; }
+      .right-panel .section { min-width: 0; }
+    }
+
+    @media (max-width: 800px) {
+      body { padding: 0 0.75rem 2rem; }
+      .resume-card { padding: 0 1rem 2.5rem; }
+      .topbar { margin-left: -1rem; margin-right: -1rem; padding: 0.8rem 1rem; }
+      .section-nav { justify-content: flex-start; margin: 0; padding: 0.85rem 0 0; overflow-x: auto; }
+      .nav-link { flex: 0 0 auto; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 0.5rem; padding: 3.2rem 0 2.8rem; }
+      .hero-art { min-height: 15rem; order: -1; }
+      .hero-monogram { width: 10rem; height: 10rem; }
+      .hero h2 { max-width: 34rem; font-size: clamp(2.55rem, 10vw, 4rem); }
+      .hero-copy { font-size: 0.95rem; }
+      .hero-actions { gap: 0.65rem; }
+      .hero-button { padding: 0.65rem 0.9rem; }
+      .resume-grid { grid-template-columns: 1fr; gap: 0.5rem; padding-top: 1.5rem; }
+      .left-panel, .right-panel { display: flex; gap: 0.5rem; }
+      .section { margin-bottom: 1.3rem; }
+    }
+
+    @media (max-width: 480px) {
+      body { overflow-x: clip; }
+      body { padding-left: 0.45rem; padding-right: 0.45rem; }
+      .resume-card { padding-left: 0.85rem; padding-right: 0.85rem; }
+      .topbar { min-height: 4.4rem; margin-left: -0.85rem; margin-right: -0.85rem; padding-left: 0.85rem; padding-right: 0.85rem; }
+      .topbar-brand { width: 1.9rem; height: 1.9rem; }
+      .section-nav { width: 100%; max-width: 100%; min-width: 0; gap: 0.15rem; overflow-x: auto; }
+      .nav-link { padding-left: 0.5rem; padding-right: 0.5rem; font-size: 0.72rem; }
+      .hero { padding-top: 2.6rem; }
+      .hero-art { min-height: 12rem; }
+      .hero-art::before { width: 11rem; height: 9.5rem; }
+      .hero-art::after { width: 10rem; height: 9rem; }
+      .hero-monogram { width: 8.5rem; height: 8.5rem; }
+      .hero h2 { font-size: clamp(2.25rem, 12vw, 3.25rem); }
+      .hero-kicker { font-size: 0.9rem; }
+      .hero-meta { align-items: flex-start; font-size: 0.72rem; line-height: 1.4; }
+      .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
+      .hero-button { justify-content: center; text-align: center; font-size: 0.72rem; }
+      .hero-button.download { grid-column: 1 / -1; }
+      .project-header, .exp-header, .edu-title { align-items: flex-start; }
+      .edu-sub { gap: 0.35rem; }
+      .contact-item { font-size: 0.82rem; }
+      .section-title { font-size: 0.78rem; }
+    }
   </style>
 </head>
 <body>
