@@ -17,12 +17,14 @@ A responsive personal portfolio and resume website for Vrinda Khandelwal, Comput
 ```text
 Portfolio/
 |-- vrinda.html
+|-- style.css
+|-- script.js
 |-- profile.jpg
 |-- Vrinda_Khandelwal_FlowCV_Resume_2026-09-28.pdf
 `-- README.md
 ```
 
-The current site is intentionally self-contained in `vrinda.html`, which makes it simple to open or publish. As the site grows, the CSS and JavaScript can be moved into `css/style.css` and `js/script.js` without changing the design.
+`vrinda.html` contains the page structure, `style.css` contains the responsive visual system, and `script.js` contains theme switching, project filtering, printing, and reveal animations.
 
 ## Privacy Before Publishing
 
