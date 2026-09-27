@@ -805,6 +805,37 @@
       .hero-art { min-height: 16rem; order: -1; }
       .hero-caption { right: 12%; }
     }
+
+    /* Final three-color palette: black, light green, and light pink. */
+    :root {
+      --ink: #111;
+      --muted: #111;
+      --paper: #dff3e4;
+      --coral: #ffc7c2;
+      --teal: #111;
+      --line: #111;
+    }
+
+    body, .resume-card { background: #dff3e4; color: #111; }
+    .topbar, .resume-grid { border-color: #111; }
+    .topbar-brand, .action-button, .nav-link, .hero h2, .hero-button, .name-title h1,
+    .section-title, .project-name, .exp-role, .edu-title, .contact-item, .text-small,
+    .skill-list, .mini-item { color: #111 !important; }
+    .nav-link:hover, .action-button:hover { color: #111; background: #ffc7c2; }
+    .name-title .subhead, .hero-button.primary, .project-date, .exp-date,
+    .edu-title .date, .edu-sub .score, .chip, .achievement-item { background: #ffc7c2; color: #111; }
+    .hero-button:not(.primary), .objective-text, .project-item, .exp-item { background: #dff3e4; color: #111; }
+    .hero-art::before, .hero-button.primary { background-color: #ffc7c2; }
+    .hero-art::after, .hero-button:not(.primary), .hero-monogram { background-color: #dff3e4; }
+    .hero-monogram, .hero-button, .project-item, .exp-item, .chip, .achievement-item { border-color: #111; }
+    .contact-item i, .section-title i, .skill-list i, .mini-item i, .project-name i, .exp-company { color: #111 !important; }
+
+    body.dark { background: #111; --ink: #dff3e4; --muted: #ffc7c2; --paper: #111; --line: #dff3e4; }
+    body.dark .resume-card, body.dark .project-item, body.dark .exp-item { background: #111; }
+    body.dark .chip, body.dark .achievement-item, body.dark .objective-text { background: #ffc7c2; color: #111; }
+    body.dark .name-title h1, body.dark .topbar-brand, body.dark .action-button, body.dark .nav-link,
+    body.dark .hero h2, body.dark .hero-button, body.dark .section-title, body.dark .project-name,
+    body.dark .exp-role, body.dark .edu-title, body.dark .contact-item, body.dark .text-small { color: #dff3e4 !important; }
   </style>
 </head>
 <body>
@@ -1036,7 +1067,7 @@
       localStorage.setItem('vrinda-theme', isDark ? 'dark' : 'light');
     };
 
-    setTheme(localStorage.getItem('vrinda-theme') === 'dark');
+    setTheme(false);
     themeToggle.addEventListener('click', () => setTheme(!document.body.classList.contains('dark')));
     printButton.addEventListener('click', () => window.print());
 
