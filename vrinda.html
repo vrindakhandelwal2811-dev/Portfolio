@@ -484,11 +484,11 @@
 
     /* Interactive portfolio layer */
     :root {
-      --ink: #183247;
-      --muted: #48616b;
+      --ink: #202124;
+      --muted: #666;
       --paper: #fbfaf7;
       --coral: #ff705d;
-      --teal: #268391;
+      --teal: #333;
       --line: #dfe6e3;
     }
 
@@ -617,17 +617,17 @@
     .project-item.hidden { display: none; }
 
     body.dark {
-      background: #102430;
+      background: #202020;
       --ink: #f5f1e8;
-      --muted: #aec0c2;
-      --paper: #183247;
-      --line: #31505a;
+      --muted: #c8c8c8;
+      --paper: #242424;
+      --line: #444;
     }
 
     body.dark .resume-card { box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28); }
-    body.dark .chip, body.dark .project-item, body.dark .exp-item { background: #1e3c4c; }
-    body.dark .objective-text, body.dark .achievement-item { background: #203e4b; }
-    body.dark .edu-title .date { background: #284451; color: var(--muted); }
+    body.dark .chip, body.dark .project-item, body.dark .exp-item { background: #303030; }
+    body.dark .objective-text, body.dark .achievement-item { background: #333; }
+    body.dark .edu-title .date { background: #444; color: var(--muted); }
 
     @media (max-width: 600px) {
       .topbar { align-items: flex-start; }
@@ -779,11 +779,20 @@
       box-shadow: 0.6rem 0.6rem 0 #f4a7a4;
     }
 
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      transform: rotate(-8deg);
+    }
+
     .hero-caption { position: absolute; right: 0; bottom: 0; color: #888; font-size: 0.7rem; font-style: italic; }
     .resume-grid { padding-top: 2rem; border-top: 1px solid #eeeeec; }
     .left-panel, .right-panel { gap: 1.2rem; }
     .section-title { color: #555; }
-    .name-title h1 { font-family: 'DM Sans', sans-serif; font-size: 2rem; letter-spacing: -0.04em; }
+    .name-title h1 { color: #111 !important; font-family: 'DM Sans', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; }
+    .contact-item i, .section-title i, .skill-list i, .mini-item i { color: #333 !important; }
     .project-item, .exp-item { border-radius: 0.5rem; box-shadow: none; }
     .objective-text { border-radius: 0.6rem; }
 
@@ -824,7 +833,7 @@
         </div>
       </div>
       <div class="hero-art" aria-label="Vrinda Khandelwal monogram illustration">
-        <div class="hero-monogram">VK</div>
+        <div class="hero-monogram"><img class="hero-photo" src="profile.jpg" alt="Vrinda Khandelwal" onerror="this.remove(); this.parentElement.textContent='VK';"></div>
         <span class="hero-caption">Design · Code · Curiosity</span>
       </div>
     </section>
