@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -638,6 +639,163 @@
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
       .reveal { opacity: 1; transform: none; }
     }
+
+    /* Reference-inspired editorial portfolio layout */
+    body {
+      background: #fff;
+      color: #202124;
+      font-family: 'DM Sans', sans-serif;
+      padding: 0 1.6rem 4rem;
+    }
+
+    body::before, body::after { display: none; }
+    .resume-card {
+      max-width: 1180px;
+      padding: 0 2.5rem 3.5rem;
+      background: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .resume-card::before { display: none; }
+    .topbar {
+      min-height: 5.2rem;
+      margin: 0 -2.5rem;
+      padding: 0.8rem 2.5rem;
+      border-bottom: 1px solid #eeeeec;
+    }
+
+    .topbar-brand {
+      width: 2.1rem;
+      height: 2.1rem;
+      display: grid;
+      place-items: center;
+      color: #242424;
+      font-size: 0;
+      letter-spacing: 0;
+      border: 1.5px solid #242424;
+      border-radius: 50% 44% 52% 46%;
+      transform: rotate(-12deg);
+    }
+
+    .topbar-brand::after {
+      content: "VK";
+      font-size: 0.62rem;
+      font-weight: 700;
+      transform: rotate(12deg);
+    }
+
+    .topbar-actions { margin-left: auto; }
+    .action-button { border: 0; color: #242424; }
+    .action-button:hover { background: #f9c8c6; border-color: transparent; color: #242424; }
+    .section-nav {
+      justify-content: flex-end;
+      margin: -3.75rem 4.7rem 0 0;
+      padding: 0;
+      border: 0;
+      min-height: 3.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-link {
+      color: #424242;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.45rem 0.75rem;
+    }
+
+    .nav-link:hover { background: transparent; color: #e26d68; transform: none; }
+
+    .hero {
+      min-height: 29rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+      align-items: center;
+      gap: 3rem;
+      padding: 6.3rem 0 4.2rem;
+    }
+
+    .hero-kicker {
+      margin-bottom: 1.1rem;
+      color: #6c6c6c;
+      font-size: 1rem;
+    }
+
+    .hero-kicker span { color: #e26d68; }
+    .hero h2 {
+      max-width: 42rem;
+      margin-bottom: 1.4rem;
+      color: #222;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 1.03;
+    }
+
+    .hero h2 em { font-weight: 700; }
+    .hero-copy {
+      max-width: 34rem;
+      color: #777;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions { display: flex; gap: 0.8rem; margin-top: 1.8rem; flex-wrap: wrap; }
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.1rem;
+      border: 1.5px solid #222;
+      border-radius: 2rem;
+      color: #222;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .hero-button.primary { background: #f9c8c6; }
+    .hero-button:hover { transform: translateY(-2px); box-shadow: 3px 3px 0 #222; }
+    .hero-art { min-height: 20rem; position: relative; display: grid; place-items: center; }
+    .hero-art::before, .hero-art::after { content: ""; position: absolute; border-radius: 50%; }
+    .hero-art::before { width: 15rem; height: 13rem; background: #f8d9d5; transform: rotate(-18deg); }
+    .hero-art::after { width: 13rem; height: 12rem; background: #e5f0e5; transform: translate(3rem, 1rem) rotate(18deg); }
+    .hero-monogram {
+      width: 12rem;
+      height: 12rem;
+      display: grid;
+      place-items: center;
+      position: relative;
+      z-index: 1;
+      border: 2px solid #242424;
+      border-radius: 48% 52% 45% 55%;
+      background: #fff;
+      color: #242424;
+      font-family: 'DM Serif Display', serif;
+      font-size: 4.2rem;
+      transform: rotate(8deg);
+      box-shadow: 0.6rem 0.6rem 0 #f4a7a4;
+    }
+
+    .hero-caption { position: absolute; right: 0; bottom: 0; color: #888; font-size: 0.7rem; font-style: italic; }
+    .resume-grid { padding-top: 2rem; border-top: 1px solid #eeeeec; }
+    .left-panel, .right-panel { gap: 1.2rem; }
+    .section-title { color: #555; }
+    .name-title h1 { font-family: 'DM Sans', sans-serif; font-size: 2rem; letter-spacing: -0.04em; }
+    .project-item, .exp-item { border-radius: 0.5rem; box-shadow: none; }
+    .objective-text { border-radius: 0.6rem; }
+
+    @media (max-width: 800px) {
+      body { padding: 0 1rem 2rem; }
+      .resume-card { padding: 0 1.25rem 2.5rem; }
+      .topbar { margin: 0 -1.25rem; padding: 0.8rem 1.25rem; }
+      .section-nav { justify-content: flex-start; margin: 0; min-height: auto; padding: 0.9rem 0 0; overflow-x: auto; }
+      .hero { grid-template-columns: 1fr; gap: 1rem; padding: 4rem 0 3rem; }
+      .hero-art { min-height: 16rem; order: -1; }
+      .hero-caption { right: 12%; }
+    }
   </style>
 </head>
 <body>
@@ -655,6 +813,21 @@
       <a class="nav-link" href="#experience">Experience</a>
       <a class="nav-link" href="#education">Education</a>
     </nav>
+    <section class="hero reveal" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="hero-kicker">Hi, I'm Vrinda <span>✦</span></p>
+        <h2 id="hero-title">I design and build digital experiences that drive <em>impact.</em></h2>
+        <p class="hero-copy">I blend thoughtful design with practical engineering to create clear, useful products while growing as a software engineer.</p>
+        <div class="hero-actions">
+          <a class="hero-button primary" href="#projects">Explore my work <i class="fas fa-arrow-right"></i></a>
+          <a class="hero-button" href="mailto:khandelwalvinda031@gmail.com">Let's connect <i class="fas fa-paper-plane"></i></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Vrinda Khandelwal monogram illustration">
+        <div class="hero-monogram">VK</div>
+        <span class="hero-caption">Design · Code · Curiosity</span>
+      </div>
+    </section>
     <div class="resume-grid">
       <!-- LEFT PANEL -->
       <div class="left-panel">
