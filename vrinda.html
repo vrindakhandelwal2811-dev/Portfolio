@@ -724,6 +724,26 @@
     }
 
     .hero-kicker span { color: #e26d68; }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-top: 1.4rem;
+      color: #555;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .availability-dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      display: inline-block;
+      border-radius: 50%;
+      background: #7fbf91;
+      box-shadow: 0 0 0 0.25rem #dff3e4;
+    }
+
     .hero h2 {
       max-width: 42rem;
       margin-bottom: 1.4rem;
@@ -758,6 +778,9 @@
 
     .hero-button.primary { background: #f9c8c6; }
     .hero-button:hover { transform: translateY(-2px); box-shadow: 3px 3px 0 #222; }
+    .hero-button:focus-visible, .nav-link:focus-visible, .action-button:focus-visible,
+    .filter-button:focus-visible { outline: 3px solid #ffc7c2; outline-offset: 3px; }
+    .hero-button.download { background: transparent; }
     .hero-art { min-height: 20rem; position: relative; display: grid; place-items: center; }
     .hero-art::before, .hero-art::after { content: ""; position: absolute; border-radius: 50%; }
     .hero-art::before { width: 15rem; height: 13rem; background: #f8d9d5; transform: rotate(-18deg); }
@@ -795,6 +818,7 @@
     .contact-item i, .section-title i, .skill-list i, .mini-item i { color: #333 !important; }
     .project-item, .exp-item { border-radius: 0.5rem; box-shadow: none; }
     .objective-text { border-radius: 0.6rem; }
+    .section { scroll-margin-top: 2rem; }
 
     @media (max-width: 800px) {
       body { padding: 0 1rem 2rem; }
@@ -856,6 +880,8 @@
     body.dark .action-button i { color: #111 !important; }
     body.dark .topbar-brand { border-color: #dff3e4 !important; }
     body.dark .skill-list, body.dark .skill-list span { color: #dff3e4 !important; }
+    body.dark .hero-meta { color: #ffc7c2; }
+    body.dark .hero-button.download { color: #dff3e4 !important; border-color: #dff3e4; }
   </style>
 </head>
 <body>
@@ -878,9 +904,11 @@
         <p class="hero-kicker">Hi, I'm Vrinda <span>✦</span></p>
         <h2 id="hero-title">I design and build digital experiences that drive <em>impact.</em></h2>
         <p class="hero-copy">I blend thoughtful design with practical engineering to create clear, useful products while growing as a software engineer.</p>
+        <div class="hero-meta"><span class="availability-dot" aria-hidden="true"></span> Open to internships and meaningful collaborations</div>
         <div class="hero-actions">
           <a class="hero-button primary" href="#projects">Explore my work <i class="fas fa-arrow-right"></i></a>
           <a class="hero-button" href="mailto:khandelwalvinda031@gmail.com">Let's connect <i class="fas fa-paper-plane"></i></a>
+          <a class="hero-button download" href="Vrinda_Khandelwal_FlowCV_Resume_2026-09-28.pdf" download><i class="fas fa-download"></i> Download resume</a>
         </div>
       </div>
       <div class="hero-art" aria-label="Vrinda Khandelwal monogram illustration">
