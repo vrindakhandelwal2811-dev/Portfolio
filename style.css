@@ -16,7 +16,7 @@
       min-height: 100vh;
     }
 
-    /* main card â€“ glassmorphism with subtle shadow */
+    /* main card – glassmorphism with subtle shadow */
     .resume-card {
       max-width: 1100px;
       width: 100%;
@@ -39,7 +39,7 @@
       gap: 2rem 2.5rem;
     }
 
-    /* LEFT COLUMN â€” profile, contact, skills, etc. */
+    /* LEFT COLUMN — profile, contact, skills, etc. */
     .left-panel {
       display: flex;
       flex-direction: column;
@@ -317,7 +317,7 @@
     }
 
     .project-desc li::before {
-      content: "â–¹";
+      content: "▹";
       position: absolute;
       left: 0;
       color: #3b82f6;
@@ -376,7 +376,7 @@
     }
 
     .exp-desc li::before {
-      content: "â€¢";
+      content: "•";
       position: absolute;
       left: 0;
       color: #3b82f6;
@@ -928,3 +928,4 @@
       .contact-item { font-size: 0.82rem; }
       .section-title { font-size: 0.78rem; }
     }
+
