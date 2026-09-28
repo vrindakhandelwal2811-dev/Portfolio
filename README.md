@@ -20,7 +20,7 @@ Portfolio/
 |-- style.css
 |-- script.js
 |-- profile.jpg
-|-- Vrinda_Khandelwal_FlowCV_Resume_2026-09-28.pdf
+|-- Vrinda_Khandelwal.pdf
 `-- README.md
 ```
 
